@@ -1,134 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Panadería Delicia</title>
-  <link rel="stylesheet" href="estilos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <!-- SweetAlert2 CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-<!-- FontAwesome (si no lo tienes) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
 
-  <header class="hero">
-    <nav class="nav-bar">
-      <h1>Panadería Delicia</h1>
-      <ul class="menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#pedidos">Pedidos</a></li>
-      <!--Opcion de carrito de compras-->
-        <li class="cart-icon">
-          <a href="#">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count">0</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <div class="hero-content">
-      <h2>Sweet Treats, Perfect Eats</h2>
-      <p>Delicias horneadas con amor cada día</p>
-      <a class="btn" href="#productos">Ver productos</a>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Panadería Delicia</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav-bar">
+        <h1>Panadería Delicia</h1>
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#pedidos">Pedidos</a></li>
+          <!--Opcion de carrito de compras-->
+          <li class="cart-icon">
+            <a href="#">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <h2>Sweet Treats, Perfect Eats</h2>
+        <p>Delicias horneadas con amor cada día</p>
+        <a class="btn" href="#productos">Ver productos</a>
+      </div>
+    </header>
+>>>>>>> 271ceb751a68d53c5a0b013759f9b695fbce7c6b
 
-  <section id="productos" class="productos">
-    <h2>Top Productos</h2>
-    <div class="grid-productos">
-      <div class="card">
-        <img src="img/pan.jpg" alt="Pan">
-        <h3>Pan Artesanal</h3>
-        <p>S/4.00</p>
-        <button>Agregar</button>
-      </div>
-      <!-- Más productos similares -->
-      <div class="card">
-        <img src="img/bizcocho.jpg" alt="Bizcocho">
-        <h3>Bizcocho</h3>
-        <p>S/10.00</p>
-        <button>Agregar</button>
-      </div>
-      <div class="card">
-        <img src="img/pizzascaseras.jpg" alt="Pizza">
-        <h3>Pizza</h3>
-        <p>S/10.00</p>
-        <button>Agregar</button>
-      </div>
-      <div class="card">
-        <img src="img/pionono.jpg" alt="Pionono">
-        <h3>Pionono</h3>
-        <p>S/10.00</p>
-        <button>Agregar</button>
-      </div>
-      <div class="card">
-        <img src="img/piedemanzana.jpg" alt="Pye">
-        <h3>Pye de manzana</h3>
-        <p>S/10.00</p>
-        <button>Agregar</button>
-      </div>
-      <div class="card">
-        <img src="img/tortahelada.jpg" alt="Tortas">
-        <h3>Torta helada</h3>
-        <p>S/10.00</p>
-        <button>Agregar</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="promo">
-    <h2>20% de descuento en tu primer pedido</h2>
-    <p>¡Aprovecha nuestra promoción especial!</p>
-    <a class="btn" href="#pedidos">Pedir ahora</a>
-  </section>
-
-  
-
-  <section class="explore">
-    <h2>Escoge</h2>
-    <div class="tabs">
-      <button class="active" data-categoria="todos">Todos</button>
-      <button data-categoria="pan">Panes</button>
-      <button data-categoria="pizzas">Pizzas</button>
-      <button data-categoria="piononos">Piononos</button>
-      <button data-categoria="tortas">Tortas</button>
-      <button data-categoria="pye">Pye</button>
-      <button data-categoria="bizcochos">Bizcochos</button>
-    </div>
-  
-    <div class="gallery">
+    <section id="productos" class="productos">
+      <h2>Top Productos</h2>
       <div class="grid-productos">
-        <div class="item piononos card">        
-          <img src="img/pionono.jpg" alt="Piononos">    
+        <div class="card">
+          <img src="img/pan.jpg" alt="Pan" />
+          <h3>Pan Artesanal</h3>
+          <p>S/4.00</p>
+          <button>Agregar</button>
         </div>
-        <div class="item bizcochos card">
-          <img src="img/bizcocho.jpg" alt="Bizcochos">
+        <!-- Más productos similares -->
+        <div class="card">
+          <img src="img/bizcocho.jpg" alt="Bizcocho" />
+          <h3>Bizcocho</h3>
+          <p>S/10.00</p>
+          <button>Agregar</button>
         </div>
-        <div class="item pye card">
-          <img src="img/piedemanzana.jpg" alt="Pye de Manzana">
+        <div class="card">
+          <img src="img/pizzascaseras.jpg" alt="Pizza" />
+          <h3>Pizza</h3>
+          <p>S/10.00</p>
+          <button>Agregar</button>
         </div>
-        <div class="item pizzas card">
-          <img src="img/pizzascaseras.jpg" alt="Pizzas Caseras">
+        <div class="card">
+          <img src="img/pionono.jpg" alt="Pionono" />
+          <h3>Pionono</h3>
+          <p>S/10.00</p>
+          <button>Agregar</button>
         </div>
-        <div class="item pan card">
-          <img src="img/pan.jpg" alt="Panes">
+        <div class="card">
+          <img src="img/piedemanzana.jpg" alt="Pye" />
+          <h3>Pye de manzana</h3>
+          <p>S/10.00</p>
+          <button>Agregar</button>
         </div>
-        <div class="item tortas card">
-          <img src="img/tortahelada.jpg" alt="Torta Helada">
+        <div class="card">
+          <img src="img/tortahelada.jpg" alt="Tortas" />
+          <h3>Torta helada</h3>
+          <p>S/10.00</p>
+          <button>Agregar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo">
+      <h2>20% de descuento en tu primer pedido</h2>
+      <p>¡Aprovecha nuestra promoción especial!</p>
+      <a class="btn" href="#pedidos">Pedir ahora</a>
+    </section>
+
+    <section class="explore">
+      <h2>Escoge</h2>
+      <div class="tabs">
+        <button class="active" data-categoria="todos">Todos</button>
+        <button data-categoria="pan">Panes</button>
+        <button data-categoria="pizzas">Pizzas</button>
+        <button data-categoria="piononos">Piononos</button>
+        <button data-categoria="tortas">Tortas</button>
+        <button data-categoria="pye">Pye</button>
+        <button data-categoria="bizcochos">Bizcochos</button>
+      </div>
+
+      <div class="gallery">
+        <div class="grid-productos">
+          <div class="item piononos card">
+            <img src="img/pionono.jpg" alt="Piononos" />
+          </div>
+          <div class="item bizcochos card">
+            <img src="img/bizcocho.jpg" alt="Bizcochos" />
+          </div>
+          <div class="item pye card">
+            <img src="img/piedemanzana.jpg" alt="Pye de Manzana" />
+          </div>
+          <div class="item pizzas card">
+            <img src="img/pizzascaseras.jpg" alt="Pizzas Caseras" />
+          </div>
+          <div class="item pan card">
+            <img src="img/pan.jpg" alt="Panes" />
+          </div>
+          <div class="item tortas card">
+            <img src="img/tortahelada.jpg" alt="Torta Helada" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="nosotros">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        Panadería familiar con recetas tradicionales y pasión por el pan y la
+        pastelería.
+      </p>
+    </section>
+
+    <section id="pedidos">
+      <h2>Haz tu Pedido</h2>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" />
+
+        <label for="producto">Producto:</label>
+        <input type="text" id="producto" name="producto" />
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" />
+
+        <input type="submit" value="Enviar Pedido" />
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <h3>Contacto</h3>
+          <p>📞 987 654 321</p>
+          <p>📧 panaderiadelicia@gmail.com</p>
+        </div>
+        <div>
+          <h3>Redes</h3>
+          <p>Facebook · Instagram · WhatsApp</p>
+        </div>
+        <div>
+          <h3>Explora</h3>
+          <p>Inicio · Productos · Nosotros · Pedidos</p>
+        </div>
+      </div>
+      <p class="copy">
+        &copy; 2025 Panadería Delicia. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <!-- Carrito de compras-->
+    <div class="cart-modal">
+      <div class="cart-content">
+        <h2>Tu Carrito <i class="fas fa-times close-cart"></i></h2>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+          <strong>Total: S/ <span>0.00</span></strong>
+          <button class="btn checkout">Finalizar Compra</button>
         </div>
       </div>
     </div>
-  </section>
-  
 
-  <section id="nosotros" class="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>Panadería familiar con recetas tradicionales y pasión por el pan y la pastelería.</p>
-  </section>
+    <!-- Compra finalizada -->
+    <div class="checkout-modal">
+      <div class="checkout-content">
+        <h2>Finalizar Compra <i class="fas fa-times close-checkout"></i></h2>
+        <form id="checkout-form">
+          <div class="form-group">
+            <label>Nombre completo:</label>
+            <input type="text" required />
+          </div>
+          <div class="form-group">
+            <label>Correo electrónico:</label>
+            <input type="email" required />
+          </div>
+          <div class="form-group">
+            <label>Teléfono:</label>
+            <input type="tel" required />
+          </div>
 
+<<<<<<< HEAD
   <section id="pedidos" class="pedidos">
     <h2>Haz tu Pedido</h2>
     <form id="formulario-pedido" class="form-pedido">
@@ -181,11 +254,32 @@
       <div>
         <h3>Explora</h3>
         <p>Inicio · Productos · Nosotros · Pedidos</p>
+=======
+          <div class="payment-methods">
+            <h3>Método de pago</h3>
+            <div class="payment-option active">
+              <i class="fas fa-money-bill-wave"></i>
+              <span>Pago contra entrega</span>
+            </div>
+            <div class="payment-option">
+              <i class="fab fa-paypal"></i>
+              <span>PayPal</span>
+            </div>
+            <div class="payment-option">
+              <i class="fas fa-credit-card"></i>
+              <span>Tarjeta de crédito</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn confirm-purchase">
+            Confirmar Compra
+          </button>
+        </form>
+>>>>>>> 271ceb751a68d53c5a0b013759f9b695fbce7c6b
       </div>
     </div>
-    <p class="copy">&copy; 2025 Panadería Delicia. Todos los derechos reservados.</p>
-  </footer>
 
+<<<<<<< HEAD
   <!-- Carrito de compras-->
   <div class="cart-modal">
     <div class="cart-content">
@@ -202,4 +296,8 @@
   <script src="script.js"></script>
 
 </body>
+=======
+    <script src="script.js"></script>
+  </body>
+>>>>>>> 271ceb751a68d53c5a0b013759f9b695fbce7c6b
 </html>
