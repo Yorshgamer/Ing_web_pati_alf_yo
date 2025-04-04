@@ -98,5 +98,72 @@ function updateCart() {
   });
 }
 
+// === FUNCIONALIDAD DEL FORMULARIO ===
+document.addEventListener("DOMContentLoaded", function() {
+  // Controles de cantidad (+/-)
+  document.querySelectorAll('.cantidad-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const input = button.parentElement.querySelector('input');
+      let value = parseInt(input.value);
+      
+      if (button.dataset.action === 'increment') {
+        value++;
+      } else {
+        value = value > 1 ? value - 1 : 1;
+      }
+      
+      input.value = value;
+    });
+  });
+
+  // Envío del formulario con SweetAlert2
+  const formulario = document.getElementById('formulario-pedido');
+  formulario.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nombre = document.getElementById('nombre').value;
+    const telefono = document.getElementById('telefono').value;
+    const producto = document.getElementById('producto').value;
+    const cantidad = document.getElementById('cantidad').value;
+
+    // Validación simple
+    if (!nombre || !producto || !cantidad) {
+      Swal.fire({
+        title: '¡Oops!',
+        text: 'Por favor completa todos los campos',
+        icon: 'error',
+        confirmButtonColor: '#d2691e'
+      });
+      return;
+    }
+
+    // Modal de confirmación
+    Swal.fire({
+      title: '¿Confirmar pedido?',
+      html: `
+        <p><strong>Cliente:</strong> ${nombre}</p>
+        <p><strong>Teléfono:</strong> ${telefono}</p>
+        <p><strong>Producto:</strong> ${producto} (x${cantidad})</p>
+      `,
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#d2691e',
+      cancelButtonColor: '#d33',
+      confirmButtonText: '¡Sí, enviar!',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: '¡Pedido enviado!',
+          text: 'Gracias por tu compra. Nos contactaremos pronto.',
+          icon: 'success',
+          confirmButtonColor: '#d2691e'
+        });
+        formulario.reset(); // Limpiar formulario
+      }
+    });
+  });
+});
+
 // Inicializar carrito
 updateCart();

@@ -5,6 +5,10 @@
   <title>Panadería Delicia</title>
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- SweetAlert2 CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<!-- FontAwesome (si no lo tienes) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -125,19 +129,41 @@
     <p>Panadería familiar con recetas tradicionales y pasión por el pan y la pastelería.</p>
   </section>
 
-  <section id="pedidos">
+  <section id="pedidos" class="pedidos">
     <h2>Haz tu Pedido</h2>
-    <form>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre">
-
-      <label for="producto">Producto:</label>
-      <input type="text" id="producto" name="producto">
-
-      <label for="cantidad">Cantidad:</label>
-      <input type="number" id="cantidad" name="cantidad" min="1">
-
-      <input type="submit" value="Enviar Pedido">
+    <form id="formulario-pedido" class="form-pedido">
+      <div class="form-group">
+        <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="telefono"><i class="fas fa-phone"></i> Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 987654321" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="producto"><i class="fas fa-bread-slice"></i> Producto:</label>
+        <select id="producto" name="producto" required>
+          <option value="">-- Selecciona --</option>
+          <option value="Pan Artesanal">Pan Artesanal (S/4.00)</option>
+          <option value="Bizcocho">Bizcocho (S/10.00)</option>
+          <!-- Añade más opciones según tus productos -->
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="cantidad"><i class="fas fa-boxes"></i> Cantidad:</label>
+        <div class="cantidad-control">
+          <button type="button" class="cantidad-btn" data-action="decrement">-</button>
+          <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+          <button type="button" class="cantidad-btn" data-action="increment">+</button>
+        </div>
+      </div>
+  
+      <button type="submit" class="btn-submit">
+        <i class="fas fa-paper-plane"></i> Enviar Pedido
+      </button>
     </form>
   </section>
 
@@ -171,6 +197,8 @@
       </div>
     </div>
   </div>
+  <!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="script.js"></script>
 
 </body>
