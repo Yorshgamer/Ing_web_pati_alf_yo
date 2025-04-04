@@ -1,0 +1,172 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f9f6f2;
+    color: #333;
+  }
+  
+  .hero {
+    background-image: url('img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px 20px;
+  }
+  
+  .nav-bar h1 {
+    font-size: 24px;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content .btn {
+    background-color: #d2691e;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .grid-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .card button {
+    background-color: #f4a460;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .promo {
+    background-color: #ffe0b3;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .nosotros {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .copy {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  /* === CATEGORÍAS (Explore More) === */
+.explore {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.explore h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  color: #333;
+}
+
+.tabs button.active,
+.tabs button:hover {
+  border-color: #d2691e;
+  color: #d2691e;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.gallery .item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.gallery .item:hover {
+  transform: scale(1.05);
+}
+
+.gallery img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
